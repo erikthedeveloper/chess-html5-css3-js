@@ -1,0 +1,107 @@
+html{
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    /*Image Credit to miroha at alphacoders.com (http://wall.alphacoders.com/big.php?i=409614)*/
+    background-image: url('http://images7.alphacoders.com/409/409614.jpg');
+    background-position: -75px -150px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.chessboard {
+    height: 800px;
+    width: 800px;
+    transition:all 500ms ease-in-out;
+    transition-delay:500ms;
+}
+.chessboard.flipped {
+    -webkit-transform: rotate(180deg);
+}
+
+.row {
+    clear: both;
+}
+
+.square {
+    background-color: #fff;
+    float: left;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+.row:nth-of-type(2n+1) .square:nth-of-type(2n+1){
+    background-color:#c2c2c2;
+}
+.row:nth-of-type(2n+2) .square:nth-of-type(2n+2){
+    background-color:#c2c2c2;
+}
+
+
+.piece {
+    font-size: 3em;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    height: 0;
+    top: 0; left: 0; bottom: 1.5em; right: 0;
+    transition:text-shadow 500ms;
+}
+.piece.black{
+    -webkit-transform: rotate(180deg);
+    bottom: -1.5em;
+}
+.square:hover .piece {
+    text-shadow: 1px 2px 1px #000;
+}
+
+.pawn:before {
+    /*&#9812; = ♔*/
+    content:'\2654 pawn';
+}
+
+.king:before {
+    /*&#9813; = ♕*/
+    content: '\2654 king';
+}
+.queen:before {
+    /*&#9814; = ♖*/
+    content: '\2654 queen';
+}
+.rook:before {
+    /*&#9815; = ♗*/
+    content: '\2654 rook';
+}
+.knight:before {
+    /*&#9816; = ♘*/
+    content: '\2654 knight';
+}
+.bishop:before {
+    /*&#9817; = ♙*/
+    content: '\2654 bishop';
+}
+.:before {
+    /*&#9818; = ♚*/
+    content: '\2654 ';
+}
+.:before {
+    /*&#9819; = ♛*/
+    content: '\2654 ';
+}
+.:before {
+    /*&#9820; = ♜*/
+    content: '\2654 ';
+}
+.:before {
+    /*&#9821; = ♝*/
+    content: '\2654 ';
+}
+.:before {
+    /*&#9822; = ♞*/
+    content: '\2654 ';
+}
+.:before {
+    /*&#9823; = ♟*/
+    content: '\2654 ';
+}
