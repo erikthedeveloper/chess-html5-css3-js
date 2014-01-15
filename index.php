@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chess</title>
+    <title>Chess'd - An Open Sourced HTML5, CSS3, & JavaScript Online Chess Game</title>
+    
+    <meta name="description" content="Open source online chess game built with HTML5, CSS3, and JavaScript. Drag & Drop with HTML5 elements, CSS3 transforms, and JavaScript. An Erik Aybar Creation" >
     <!-- Image Credit to miroha at alphacoders.com (http://wall.alphacoders.com/big.php?i=409614) -->
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="main.css">
