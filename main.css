@@ -1,14 +1,26 @@
 html{
     font-family: 'Josefin Sans', sans-serif;
+    background-color: #252525;
 }
 body{
+    margin: 0; padding: 0;
+}
+
+.disqus_wrapper {
+    background-color: #fff;
+    padding: 15px;
+    width: 600px;
+}
+
+.chessboard-wrapper {
+    padding-left: 15px;
     /*Image Credit to miroha at alphacoders.com (http://wall.alphacoders.com/big.php?i=409614)*/
     background-image: url('http://images7.alphacoders.com/409/409614.jpg');
     background-position: -75px -150px;
     background-repeat: no-repeat;
-    overflow: hidden;
-}
+    overflow-x: hidden;
 
+}
 .chessboard {
     height: 800px;
     width: 800px;
