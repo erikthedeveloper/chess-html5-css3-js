@@ -47,7 +47,10 @@ $rows = array(
 
     <div class="chessboard-wrapper">
         <h1>Chess'd - HTML5, CSS3, and JavaScript Online Chessboard</h1>
-	<p><a href="https://github.com/erikthedeveloper/chess-html5-css3-js" title="I'm open source" target="_blank">View me on Github</a></p>
+
+        
+        <p><a href="https://github.com/erikthedeveloper/chess-html5-css3-js" title="I'm open source" target="_blank">View me on Github</a></p>
+        
         <div class="chessboard" id="chessboard">
 
             <?php
@@ -62,6 +65,23 @@ $rows = array(
                 <?php endforeach ?>
                 </div>
             <?php endforeach ?>
+
+        </div>
+
+        <div class="chat-wrapper">
+            <div class="chat-entries">
+                <?php for ($i=0; $i < 10; $i++): ?>
+                <div class="chat-entry">
+                    <h5>Chat Entry</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptates quas dolorem laboriosam laborum iure! </p>
+                    <small>- Username</small>
+                </div>
+                <?php endfor; ?>
+            </div>
+
+            <div class="chat-new">
+                <input type="text" placeholder="Type your message...">
+            </div>
 
         </div>
     </div>
@@ -82,6 +102,11 @@ $rows = array(
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    <div class="the-description">
+      <h2>What is Chess'd?</h2>
+      <p>Currently, not a whole lot... but hey! It's something...</p>
     </div>
 
     <script src="main.js"> </script>

@@ -3,6 +3,24 @@ chessboard = document.getElementById('chessboard'),
 whites     = document.getElementsByClassName('white'),
 blacks     = document.getElementsByClassName('black');
 
+var cols = document.querySelectorAll('.draggable');
+[].forEach.call(cols, function(col) {
+  col.addEventListener('dragstart', handleDragStart, false);
+  col.addEventListener('dragenter', handleDragEnter, false);
+  col.addEventListener('dragover', handleDragOver, false);
+  col.addEventListener('dragleave', handleDragLeave, false);
+});
+
+var cols = document.querySelectorAll('.draggable');
+[].forEach.call(cols, function(col) {
+  col.addEventListener('dragstart', handleDragStart, false);
+  col.addEventListener('dragenter', handleDragEnter, false)
+  col.addEventListener('dragover', handleDragOver, false);
+  col.addEventListener('dragleave', handleDragLeave, false);
+  col.addEventListener('drop', handleDrop, false);
+  col.addEventListener('dragend', handleDragEnd, false);
+});
+
 var Game = {};
 
 Game.nextMove = function() {
@@ -13,9 +31,18 @@ Game.nextMove = function() {
   }
 };
 
+/*===============================================
+=            Drag/Drop Functionality            =
+===============================================*/
 
 function handleDragStart(e) {
-  this.style.opacity = '0.4';  // this / e.target is the source node.
+  // Target (this) element is the source node.
+  this.style.opacity = '0.4';
+
+  dragSrcEl = this;
+
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/html', this.innerHTML);
 }
 
 function handleDragOver(e) {
@@ -37,13 +64,7 @@ function handleDragLeave(e) {
   this.classList.remove('over');  // this / e.target is previous target element.
 }
 
-var cols = document.querySelectorAll('.draggable');
-[].forEach.call(cols, function(col) {
-  col.addEventListener('dragstart', handleDragStart, false);
-  col.addEventListener('dragenter', handleDragEnter, false);
-  col.addEventListener('dragover', handleDragOver, false);
-  col.addEventListener('dragleave', handleDragLeave, false);
-});
+
 
 function handleDrop(e) {
   // this/e.target is current target element.
@@ -73,23 +94,3 @@ function handleDragEnd(e) {
   });
 }
 
-var cols = document.querySelectorAll('.draggable');
-[].forEach.call(cols, function(col) {
-  col.addEventListener('dragstart', handleDragStart, false);
-  col.addEventListener('dragenter', handleDragEnter, false)
-  col.addEventListener('dragover', handleDragOver, false);
-  col.addEventListener('dragleave', handleDragLeave, false);
-  col.addEventListener('drop', handleDrop, false);
-  col.addEventListener('dragend', handleDragEnd, false);
-});
-
-
-function handleDragStart(e) {
-  // Target (this) element is the source node.
-  this.style.opacity = '0.4';
-
-  dragSrcEl = this;
-
-  e.dataTransfer.effectAllowed = 'move';
-  e.dataTransfer.setData('text/html', this.innerHTML);
-}

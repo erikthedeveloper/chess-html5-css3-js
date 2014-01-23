@@ -10,10 +10,18 @@ body{
     background-color: #fff;
     padding: 15px;
     width: 600px;
+    float: left;
 }
+.the-description {
+    float: left;
+    color: #fff;
+    padding: 15px;
+}
+
 
 .chessboard-wrapper {
     padding-left: 15px;
+    padding-bottom: 15px;
     /*Image Credit to miroha at alphacoders.com (http://wall.alphacoders.com/big.php?i=409614)*/
     background-image: url('http://images7.alphacoders.com/409/409614.jpg');
     background-position: -75px -150px;
@@ -21,7 +29,38 @@ body{
     overflow-x: hidden;
 
 }
+
+.chat-wrapper {
+    float: right;
+    width: 400px;
+    margin-right: 50px;
+    border-radius: 20px 20px 0 0;
+    background-color: rgba(255,255,255, 0.4);
+    box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+}
+
+.chat-entries {
+    height: 700px;
+    float: left;
+    overflow-y: auto;
+}
+
+.chat-entry {
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.chat-new input {
+    box-sizing: border-box;
+    height: 25;
+    font-size: 20pt;
+    padding: 15px;
+    width: 100%;
+}
+
 .chessboard {
+    float: left;
     height: 800px;
     width: 800px;
     transition:all 500ms ease-in-out;
