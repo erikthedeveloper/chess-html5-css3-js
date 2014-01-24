@@ -1,4 +1,5 @@
 <?php
+// Not needed!
 return array(
     'w-king' => '&#9812;',
     'w-queen' => '&#9813;',
